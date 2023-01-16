@@ -21,7 +21,7 @@
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">Date </label>
-                                        <input type="date" class="form-control" name="date" required>
+                                        <input type="date" class="form-control" name="service_time" required>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">Type</label>
