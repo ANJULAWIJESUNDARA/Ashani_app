@@ -17,7 +17,7 @@
                                     @csrf
                                     <div class="col-12">
                                         <label class="form-label">House No</label>
-                                        <input type="text" class="form-control" name="house_no" required>
+                                        <input type="number" class="form-control" name="house_no" required>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">Full Name</label>

@@ -41,7 +41,7 @@ class RetireesController extends Controller
 ' ;
                     return $html;
                 })
-              
+
                 ->removeColumn('created_at')
                 ->removeColumn('updated_at')
                 ->removeColumn('deleted_at')
@@ -92,9 +92,12 @@ class RetireesController extends Controller
      * @param  \App\Retirees  $retirees
      * @return \Illuminate\Http\Response
      */
-    public function edit(Retirees $retirees)
+    public function edit($id)
     {
-        //
+        $info = Retirees::find($id);
+        return view('admin.retirees.edit' ,compact('info'));
+
+
     }
 
     /**
@@ -104,9 +107,13 @@ class RetireesController extends Controller
      * @param  \App\Retirees  $retirees
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Retirees $retirees)
+    public function update(Request $request, $id)
     {
-        //
+        // dd($retirees);
+        $retirees = Retirees::find($id);
+        $info = $retirees->update($request->all());
+        return redirect()->route('retirees.index');
+
     }
 
     /**
@@ -115,8 +122,10 @@ class RetireesController extends Controller
      * @param  \App\Retirees  $retirees
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Retirees $retirees)
+    public function destroy($id)
     {
-        //
+        $info = Retirees::find($id);
+        $info->delete();
+        return redirect()->route('retirees.index');
     }
 }

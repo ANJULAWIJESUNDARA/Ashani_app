@@ -1,5 +1,5 @@
 @extends('admin.home')
-@section('title' , 'Edit')
+@section('title' , 'Edit Retirees Info')
 @section('content')
     <div class="page-content-wrapper">
         <!-- start page content-->
@@ -11,41 +11,39 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="border p-3 rounded">
-                                <h6 class="mb-0 text-uppercase">Packages</h6>
+                                <h6 class="mb-0 text-uppercase">Edit RETIREES INFO</h6>
                                 <hr>
-                                <form class="row g-3" method="POST" action="{{route('packages.update' , [$Package->id])}}">
+                                <form class="row g-3" method="POST" action="{{route('retirees.update' , $info->id)}}">
                                     @method('PUT')
+
                                     @csrf
                                     <div class="col-12">
-                                        <label class="form-label"> Name</label>
-                                        <input type="text" class="form-control" name="name" value="{{$Package->name}}" required>
+                                        <label class="form-label">House No</label>
+                                        <input type="number" class="form-control" value="{{$info->house_no}}" name="house_no" required>
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label">Basic Price</label>
-                                        <input type="text" class="form-control" name="basic_price"value="{{$Package->basic_price}}"   required>
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" name="full_name" value="{{$info->full_name}}" required>
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label">Regular Price</label>
-                                        <input type="text" class="form-control" name="regular_price" value="{{$Package->regular_price}}" required>
+                                        <label class="form-label">Address</label>
+                                        <input type="text" class="form-control" name="address" value="{{$info->address}}" required>
                                     </div>
                                     <div class="col-12">
-                                        <label class="form-label">Premium Price</label>
-                                        <input type="text" class="form-control" name="premium_price"value="{{$Package->premium_price}}"  required>
+                                        <label class="form-label">Contact No</label>
+                                        <input type="text" class="form-control" name="contact_no" value="{{$info->contact_no}}" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">NIC</label>
+                                        <input type="text" class="form-control" name="nic" value="{{$info->nic}}" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Pension Number</label>
+                                        <input type="text" class="form-control" name="pension_number" value="{{$info->pension_number}}" required>
                                     </div>
 
 
-                                    <div class="col-12">
-                                        <label class="form-label">Additional Information</label>
-                                        <textarea class="form-control" rows="4" cols="4" name="description" value="" >{{$Package->description}}</textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check d-flex justify-content-center gap-2">
-                                            <input class="form-check-input" type="checkbox" name="is_active" id="gridCheck3-c" checked="">
-                                            <label class="form-check-label" for="gridCheck3-c">
-                                               Is Active
-                                            </label>
-                                        </div>
-                                    </div>
+
                                     <div class="col-12">
                                         <div class="d-grid">
                                             <button type="submit" class="btn btn-primary">Save</button>
