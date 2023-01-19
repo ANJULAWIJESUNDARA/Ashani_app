@@ -208,14 +208,16 @@
                         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
                            data-bs-toggle="dropdown">
                             <div class="user-setting">
-                                <img src="{{asset('assets/images/avatars/06.png')}}" class="user-img" alt="">
+                                <h6 class="mb-0 dropdown-user-name">{{$user->name}}</h6>
+
+                                {{-- <img src="{{asset('assets/images/avatars/06.png')}}" class="user-img" alt=""> --}}
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex flex-row align-items-center gap-2">
-                                        <img src="{{asset('assets/images/avatars/06.png')}}" alt=""
+                                        {{-- <img src="{{asset('assets/images/avatars/06.png')}}" alt="" --}}
                                              class="rounded-circle" width="54" height="54">
                                         <div class="">
                                             <h6 class="mb-0 dropdown-user-name">{{$user->name}}</h6>

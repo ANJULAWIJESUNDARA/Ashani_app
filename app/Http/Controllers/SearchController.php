@@ -42,12 +42,12 @@ class SearchController extends Controller
     {
         $name = $request->house_no;
 
-        $death_certifactes = DeathCertificate::where('deceased_name' ,$name)->get();
-        $expatriates = Expatriates::where('name' ,$name)->get();
-        $former_g_n_s = FormerGN::where('name' , $name)->get();
-        $income_certificates = IncomeCertificates::where('full_name' , $name)->get();
-        $inquireis = Inquireis::where('name' , $name)->get();
-        $retirees = Retirees::where('full_name' , $name)->get();
+        $death_certifactes = DeathCertificate::where('deceased_name' ,'like', '%'.$name.'%')->get();
+        $expatriates = Expatriates::where('name' ,'like', '%'.$name.'%')->get();
+        $former_g_n_s = FormerGN::where('name' , 'like', '%'.$name.'%')->get();
+        $income_certificates = IncomeCertificates::where('full_name' , 'like', '%'.$name.'%')->get();
+        $inquireis = Inquireis::where('name' , 'like', '%'.$name.'%')->get();
+        $retirees = Retirees::where('full_name' , 'like', '%'.$name.'%')->get();
         // dd($death_certifactes , $expatriates , $former_g_n_s, $income_certificates ,$inquireis ,$retirees);
 
         return view('admin.search.info' , compact('death_certifactes' ,'expatriates' ,'former_g_n_s' , 'income_certificates' , 'inquireis' ,'retirees'  ));

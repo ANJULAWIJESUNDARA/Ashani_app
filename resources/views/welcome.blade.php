@@ -94,7 +94,7 @@
                 @auth
                 <a href="{{ url('/home') }}">Home</a>
                 @else
-                <a href="{{ route('login') }}">Log In</a>
+                <a href="{{ route('login') }}">LOGIN</a>
                 @endauth
                 {{-- <a href="portfolio.html">PORTFOLIO</a> --}}
 
@@ -112,8 +112,8 @@
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+          {{-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li> --}}
+          {{-- <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li> --}}
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -139,7 +139,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          {{-- <div class="carousel-item">
             <div class="row">
               <div class="col-md-3 offset-md-2">
                 <div class="slider_detail">
@@ -154,7 +154,6 @@
                   </p>
                   <div>
                     <a href="">
-                      {{-- Read More --}}
                     </a>
                   </div>
                 </div>
@@ -166,15 +165,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel_btn-container">
+        </div> --}}
+        {{-- <div class="carousel_btn-container">
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div> --}}
       </div>
 
     </section>
